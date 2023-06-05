@@ -14,6 +14,12 @@ vim.opt.timeout = true
 vim.opt.timeoutlen = 500
 vim.opt.ttimeoutlen = 10
 
+-- search
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+-- numbered lines
+vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.clipboard = "unnamedplus"
