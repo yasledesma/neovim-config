@@ -25,25 +25,6 @@ return require('packer').startup(function(use)
           end
     }
 
-    -- terminal
-    use {
-        "akinsho/toggleterm.nvim", tag = '*', config = function()
-        require("toggleterm").setup {
-            size = 50,
-            open_mapping = [[ttl]],
-            terminal_mappings = true,
-            shade_filetypes = {},
-            shade_terminals = true,
-            shading_factor = '1',
-            start_in_insert = true,
-            persist_size = true,
-            persist_mode = true,
-            direction = 'float',
-            auto_scroll = true
-        }
-        end
-    }
-
     -- fuzy finder
     use {
       'nvim-telescope/telescope.nvim', tag = '0.1.1',
