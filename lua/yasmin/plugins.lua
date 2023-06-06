@@ -4,7 +4,14 @@ return require('packer').startup(function(use)
     -- packer can manage itself
     use 'wbthomason/packer.nvim'
 
-
+    -- toggle comments
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+    
     -- escape remap (avoid delay)
     use {
       "max397574/better-escape.nvim",
@@ -23,7 +30,7 @@ return require('packer').startup(function(use)
         "akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup {
             size = 50,
-            open_mapping = [[<leader>tt]],
+            open_mapping = [[ttl]],
             terminal_mappings = true,
             shade_filetypes = {},
             shade_terminals = true,
@@ -44,9 +51,9 @@ return require('packer').startup(function(use)
     }
 
     -- syntax highlightning
-    use {
+    use (
         'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'}
-    } 
+    ) 
 
     -- theme
     use({

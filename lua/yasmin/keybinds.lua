@@ -1,5 +1,6 @@
--- standard remaps
+-- -- standard remaps
 vim.g.mapleader = " "
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) 
 
 -- copy and paste behavior
 vim.keymap.set("n", "y", '"+y')
