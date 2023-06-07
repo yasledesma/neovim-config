@@ -1,3 +1,5 @@
+-- general
+vim.opt.clipboard = "unnamedplus"
 -- set colorscheme
 vim.o.termguicolors = true
 
@@ -22,6 +24,8 @@ vim.opt.incsearch = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.clipboard = "unnamedplus"
-
-vim.opt.scrolloff = 8
+-- undo history
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
