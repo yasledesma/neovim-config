@@ -32,7 +32,10 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-    
+
+    -- indentation
+    use 'lukas-reineke/indent-blankline.nvim'
+
     -- escape remap (avoid delay)
     use "max397574/better-escape.nvim"
 
